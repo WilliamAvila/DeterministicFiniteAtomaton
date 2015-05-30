@@ -1,7 +1,9 @@
+import java.io.Serializable;
+
 /**
  * Created by william on 5/1/15.
  */
-public class Transition {
+public class Transition implements Serializable {
     State source;
     State destination;
     char symbol;
@@ -11,4 +13,7 @@ public class Transition {
         this.destination = destination;
         this.symbol = symbol;
     }
+
+
+
 }

@@ -1,14 +1,24 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by william on 4/29/15.
  */
-public  class Automaton {
+public  class Automaton  implements java.io.Serializable {
     public Set<State> states;                 //1.A finite set of states Q
     public Set<Character>alphabet;            //2.A finite set of symbols alphabet
     public State startState;                  //3.A start state
     public Set<State> finalStates;            //4.A set of final or accepting states
+
+    public Set<Transition> getTransitions() {
+        return transitions;
+    }
+
+    public void setTransitions(Set<Transition> transitions) {
+        this.transitions = transitions;
+    }
 
     public Set<Transition> transitions;
 
@@ -35,10 +45,25 @@ public  class Automaton {
         System.out.println("Added State: "+state.name);
     }
 
-    public  void addTransition(Transition transition){
+    public Boolean addTransition(Transition transition){
+
+
+        for(Transition trans:transitions){
+            if(trans.source.name.equals(transition.source.name)&& trans.symbol ==transition.symbol)
+                return false;
+        }
+
         this.transitions.add(transition);
-        System.out.println("Added Transition: "+ transition.source.name+"-"+transition.symbol+"-"+transition.destination.name);
+        System.out.println("Added Transition: " + transition.source.name + "-" + transition.symbol + "-" + transition.destination.name);
+        alphabet.add(transition.symbol);
+
+
+        return  true;
+
+
+
     }
+
 
 
     public  void addFinalState(State state){
@@ -86,4 +111,35 @@ public  class Automaton {
     public void setFinalStates(Set<State> finalStates) {
         this.finalStates = finalStates;
     }
+
+    public void printAutomaton(){
+        for(Transition trans:transitions){
+            System.out.println("Transition: " + trans.source.name + "--" + trans.symbol + "--" + trans.destination.name);
+        }
+
+
+    }
+
+    public Set<Transition> getNextTransitions(State start){
+
+        Set<Transition>nextTransitions =new HashSet<>();
+
+        if(start!=null) {
+            for (Transition t : transitions) {
+                if (t.source.name.equals(start.name)) {
+                    nextTransitions.add(t);
+                }
+            }
+        }
+        return  nextTransitions;
+    }
+
+    public boolean existState(String s){
+        for(State st:states){
+            if(s.equals(st.name))
+                return true;
+        }
+        return false;
+    }
+
 }

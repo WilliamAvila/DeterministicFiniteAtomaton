@@ -16,9 +16,13 @@ public class DFA extends Automaton {
     public State getNextState(char symbol, State start){
         State next =null;
 
-        for(Transition t:transitions){
-            if(t.source.name.equals(start.name) && t.symbol ==symbol)
-                next = t.destination;
+        if(start!=null) {
+            for (Transition t : transitions) {
+                if (t.source.name.equals(start.name) && t.symbol == symbol) {
+                    next = t.destination;
+                    return next;
+                }
+            }
         }
         return  next;
     }
@@ -37,11 +41,10 @@ public class DFA extends Automaton {
 
             for (State s : finalStates) {
                 if (lastState.name.equals(s.name)) {
-                    accepted = true;
+                    return true;
                 }
             }
         }
-
         return accepted;
     }
 }

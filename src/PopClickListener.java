@@ -12,13 +12,13 @@ import java.awt.event.MouseEvent;
 class PopClickListener extends MouseAdapter {
     private mxGraphComponent graphComponent;
     private mxCellState state;
-    DFA dfa;
+    Automaton automata;
     mxCell cell;
 
 
-    public PopClickListener(mxGraphComponent graphComponent, DFA dfa) {
+    public PopClickListener(mxGraphComponent graphComponent, Automaton automata) {
         this.graphComponent = graphComponent;
-        this.dfa = dfa;
+        this.automata = automata;
     }
 
     public void mousePressed(MouseEvent e) {
@@ -61,7 +61,7 @@ class PopClickListener extends MouseAdapter {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
                     cell.setStyle("shape=doubleEllipse;fillColor=white;fontColor=red");
-                    dfa.addFinalState(new State(cell.getValue().toString()));
+                    automata.addFinalState(new State(cell.getValue().toString()));
                     graphComponent.refresh();
                 }
             }
@@ -74,7 +74,7 @@ class PopClickListener extends MouseAdapter {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
                     cell.setStyle("fontColor=blue");
-                    dfa.setStartState(new State(cell.getValue().toString()));
+                    automata.setStartState(new State(cell.getValue().toString()));
                     graphComponent.refresh();
                 }
             }

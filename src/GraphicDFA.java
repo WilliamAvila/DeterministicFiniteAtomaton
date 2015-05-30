@@ -4,11 +4,13 @@ import com.mxgraph.util.mxEvent;
 import com.mxgraph.view.mxGraph;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.*;
 
 
 /**
@@ -19,7 +21,7 @@ public class GraphicDFA extends JFrame {
     private mxGraphComponent graphComponent;
     private  JTextField text;
     private  JTextField evalText;
-    private JButton button;
+    private JButton addNodeButton;
     private JButton evalButton;
     private JLabel transLabel;
     private JLabel moveLabel;
@@ -27,37 +29,133 @@ public class GraphicDFA extends JFrame {
     private   mxCell cell;
     private JLabel labelA;
     private DFA dfa;
+    private NFA nfa;
+    private  JFileChooser fc;
+    private JButton openButton, saveButton;
+    private  JTextArea log;
 
 
     public  GraphicDFA(){
-        super("JGraph");
+        super("NFA");
         initGUI();
     }
 
     private void initGUI(){
-        setSize(520, 600);
+        setSize(520, 650);
         setLocationRelativeTo(null);
         graph = new mxGraph();
         dfa = new DFA();
+        nfa = new NFA();
 
+        //Init Log
+        log = new JTextArea(5,20);
+        log.setMargin(new Insets(5, 5, 5, 5));
+        log.setEditable(false);
+        JScrollPane logScrollPane = new JScrollPane(log);
+
+        fc = new JFileChooser();
+
+
+        FileNameExtensionFilter fileFilter =new FileNameExtensionFilter("ser files (*.ser)", "ser");
+
+        fc.addChoosableFileFilter(fileFilter);
+        fc.setFileFilter(fileFilter);
         graph.setCellsResizable(false);
         graph.setAllowLoops(true);
         graph.setAllowDanglingEdges(false);
         graph.setVertexLabelsMovable(false);
+
+        //Create Open File Button
+        openButton = new JButton("Open",
+                createImageIcon("Images/Open16.gif"));
+        openButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Handle open button action.
+                if (e.getSource() == openButton) {
+                    int returnVal = fc.showOpenDialog(GraphicDFA.this);
+
+                    if (returnVal == JFileChooser.APPROVE_OPTION) {
+                        File file = fc.getSelectedFile();
+                        //This is where a real application would open the file.
+                        try{
+                            System.out.println(file.getAbsolutePath());
+                            FileInputStream door = new FileInputStream(file.getAbsolutePath());
+                            ObjectInputStream reader = new ObjectInputStream(door);
+                            NFA x = new NFA();
+                            x = (NFA) reader.readObject();
+
+                            System.out.println(x.states.iterator().next().name);
+
+
+                        }catch (Exception ex) {
+                            System.out.println("Exception thrown during Opening: " + ex.toString());
+
+                        }
+                        log.append("Opening: " + file.getName() + "." + "\n");
+                    } else {
+                        log.append("Open command cancelled" + "\n");
+                    }
+                }
+            }
+        });
+
+        //Create Save File Button
+        saveButton = new JButton("Save",
+                createImageIcon("Images/Save16.png"));
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Handle save button action.
+              if (e.getSource() == saveButton) {
+                int returnVal = fc.showSaveDialog(GraphicDFA.this);
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    File file = fc.getSelectedFile();
+                    //This is where a real application would save the file.
+                    try
+                    {
+                        FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".ser");
+                        ObjectOutputStream oos = new ObjectOutputStream(fos);
+                        oos.writeObject(nfa);
+                        oos.close();
+                    }
+                    catch (Exception ex)
+                    {
+                        System.out.println("Exception thrown during Saving: " + ex.toString());
+                    }
+                    log.append("Saving: " + file.getName() + "." + "\n");
+                } else {
+                    log.append("Save command cancelled" + "\n");
+                }
+                log.setCaretPosition(log.getDocument().getLength());
+            }
+            }
+        });
+
+        //For layout purposes, put the buttons in a separate panel
+        JPanel buttonPanel = new JPanel(); //use FlowLayout
+        buttonPanel.add(openButton);
+
+        add(buttonPanel, BorderLayout.PAGE_START);
+        add(saveButton, BorderLayout.PAGE_START);
 
         graphComponent = new mxGraphComponent(graph);
         graphComponent.setPreferredSize(new Dimension(520, 400));
         getContentPane().add(graphComponent);
 
 
-
         graph.getChildVertices(graph.getDefaultParent());
 
 
-        graphComponent.getGraphControl().addMouseListener(new PopClickListener(graphComponent, dfa));
+       /* graphComponent.getGraphControl().addMouseListener(new PopClickListener(graphComponent, dfa));
 
 
-        graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, new EdgeConnectListener(graphComponent, dfa));
+        graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, new EdgeConnectionListener(graphComponent, dfa));
+*/
+        graphComponent.getGraphControl().addMouseListener(new PopClickListener(graphComponent, nfa));
+
+
+        graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, new EdgeConnectionListener(graphComponent, nfa));
 
 
         moveLabel = new JLabel();
@@ -75,28 +173,36 @@ public class GraphicDFA extends JFrame {
         text.setPreferredSize(new Dimension(150, 21));
         setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        button = new JButton("Add Node");
-        getContentPane().add(button);
-        button.addActionListener(new ActionListener() {
+        addNodeButton = new JButton("Add Node");
+        getContentPane().add(addNodeButton);
+
+        addNodeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
-                //System.out.println("Value: " + text.getText().toString());
+                String checkExistence = "";
+                //for(State st:dfa.getStates()){
+                for (State st : nfa.getStates()) {
+                    if (st.name.equals(text.getText().toString()))
+                        checkExistence = st.name;
+                }
 
-                if (!text.getText().toString().equals("")) {
+                if (!text.getText().toString().equals(checkExistence)) {
+
                     graph.getModel().beginUpdate();
                     Object parent = graph.getDefaultParent();
-
-
                     Object v1 = graph.insertVertex(parent, null, text.getText(), 330, 30, 50, 50, "shape=ellipse;fillColor=white");
                     State state = new State(text.getText().toString());
-                    dfa.addState(state);
+                    //dfa.addState(state);
+                    nfa.addState(state);
                     graph.getModel().endUpdate();
 
 
+                } else if (text.getText().toString().equals("")) {
+                    JOptionPane.showMessageDialog(null, "Name Cannot be Empty");
                 } else {
 
-                    JOptionPane.showMessageDialog(null, "Name Cannot be Empty");
+                    JOptionPane.showMessageDialog(null, "State already Exist");
                 }
             }
         });
@@ -108,7 +214,7 @@ public class GraphicDFA extends JFrame {
         evalText.setPreferredSize(new Dimension(300, 21));
 
         evalButton = new JButton("Evaluate");
-        evalButton.setPreferredSize(new Dimension(120,20));
+        evalButton.setPreferredSize(new Dimension(120, 20));
 
         evalButton.addActionListener(new ActionListener() {
             @Override
@@ -116,13 +222,13 @@ public class GraphicDFA extends JFrame {
 
                 System.out.println("Value: " + evalText.getText().toString());
 
-                if (!evalText.getText().toString().equals("") && dfa.getFinalStates()!=null&&dfa.getStartState()!=null) {
-                    if(dfa.evaluateDFA(evalText.getText().toString()))
+                //if (!evalText.getText().toString().equals("") && dfa.getFinalStates()!=null&&dfa.getStartState()!=null ) {
+                    /*if(dfa.evaluateDFA(evalText.getText().toString()))*/
+                if (/*!evalText.getText().toString().equals("") &&*/ nfa.getFinalStates() != null && nfa.getStartState() != null) {
+                    if (nfa.evaluateNFA(evalText.getText().toString(), nfa.startState))
                         labelA.setText("Accepted");
                     else
                         labelA.setText("Not Accepted");
-
-
                 } else {
 
                     JOptionPane.showMessageDialog(null, "Set a Final and an Initial State");
@@ -134,16 +240,15 @@ public class GraphicDFA extends JFrame {
         getContentPane().add(evalButton);
 
         labelA = new JLabel();
-        labelA.setPreferredSize(new Dimension(100,20));
-        labelA.setText("Test");
+        labelA.setPreferredSize(new Dimension(100, 20));
+        labelA.setText("Result");
         getContentPane().add(labelA);
 
-        graph.getModel().beginUpdate();
-        Object parent = graph.getDefaultParent();
-        graph.insertVertex(parent,null,"test",30,80,50,50,"shape=doubleEllipse;fillColor=green;fontColor=red");
 
 
-        graph.getModel().endUpdate();
+        //Add the buttons and the log to this panel.
+        add(logScrollPane, BorderLayout.CENTER);
+
     }
 
     public void addIcon(final JLabel label , int width,int height, String path){
@@ -164,6 +269,18 @@ public class GraphicDFA extends JFrame {
                 }
             }
         });
+    }
+
+
+
+    protected static ImageIcon createImageIcon(String path) {
+        java.net.URL imgURL = GraphicDFA.class.getResource(path);
+        if (imgURL != null) {
+            return new ImageIcon(imgURL);
+        } else {
+            System.err.println("Couldn't find file: " + path);
+            return null;
+        }
     }
 
 
