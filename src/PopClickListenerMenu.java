@@ -7,44 +7,22 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * Created by william on 5/1/15.
+ * Created by william on 5/31/15.
  */
-class PopClickListener extends MouseAdapter {
+public class PopClickListenerMenu {
     private mxGraphComponent graphComponent;
     private mxCellState state;
     Automaton automata;
     mxCell cell;
 
 
-    public PopClickListener(mxGraphComponent graphComponent, Automaton automata) {
+    public PopClickListenerMenu(mxGraphComponent graphComponent, Automaton automata) {
         this.graphComponent = graphComponent;
         this.automata = automata;
     }
 
     public void mousePressed(MouseEvent e) {
-
-        cell = (mxCell) graphComponent.getCellAt(e.getX(), e.getY());
-        //System.out.println(cell.getGeometry().getX() +" " +cell.getGeometry().getY());
-
-
-        /*if (SwingUtilities.isLeftMouseButton(e)) {
-
-            if (cell != null  && cell.isVertex()) {
-                //System.out.println(cell.getValue().toString());
-                if(cell.getEdgeCount()!=0)
-                    System.out.println(cell.getEdgeAt(0).getValue().toString());
-               // System.out.println(cell.getStyle().toString());
-
-
-
-            }
-        }*/
-        if (SwingUtilities.isRightMouseButton(e)){
-            mxCell cell = (mxCell) graphComponent.getCellAt(e.getX(), e.getY());
-            if (cell != null  && cell.isVertex()) {
-                doPop(e);
-            }
-        }
+        doPop(e);
     }
 
 

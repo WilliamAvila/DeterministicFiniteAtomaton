@@ -44,7 +44,7 @@ public class Main {
 
         Boolean ans=nfa.evaluateNFA("11100",nfa.startState);
         System.out.println(String.valueOf(ans));
-       // nfa.printAutomaton();
+        // nfa.printAutomaton();
         DFA dfa =nfa.convertToDFA();
         dfa.printAutomaton();
 
@@ -57,5 +57,5 @@ public class Main {
 
 
 
-        }
+    }
 }

@@ -9,12 +9,12 @@ import java.awt.event.MouseListener;
 /**
  * Created by william on 5/1/15.
  */
-class PopUpDemo extends JPopupMenu {
+class PopUpMenu extends JPopupMenu {
     JMenuItem setInitial;
     JMenuItem setFinal;
     mxGraphComponent graphComponent;
 
-    public PopUpDemo(mxGraphComponent graphComponent) {
+    public PopUpMenu(mxGraphComponent graphComponent) {
         this.graphComponent = graphComponent;
         setInitial = new JMenuItem("Set Initial");
         setFinal = new JMenuItem("Set Final");

@@ -8,6 +8,10 @@ public class Transition implements Serializable {
     State destination;
     char symbol;
 
+    public Transition() {
+
+    }
+
     public Transition(State source, State destination, char symbol) {
         this.source = source;
         this.destination = destination;

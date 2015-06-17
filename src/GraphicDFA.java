@@ -1,16 +1,21 @@
 import com.mxgraph.model.mxCell;
+import com.mxgraph.model.mxGraphModel;
+import com.mxgraph.swing.handler.mxKeyboardHandler;
 import com.mxgraph.swing.mxGraphComponent;
+import com.mxgraph.util.mxConstants;
 import com.mxgraph.util.mxEvent;
 import com.mxgraph.view.mxGraph;
+import com.mxgraph.view.mxStylesheet;
 
 import javax.swing.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Map;
 
 
 /**
@@ -26,10 +31,10 @@ public class GraphicDFA extends JFrame {
     private JLabel transLabel;
     private JLabel moveLabel;
     private JLabel deleteLabel;
-    private   mxCell cell;
     private JLabel labelA;
-    private DFA dfa;
     private NFA nfa;
+    private TuringMachine tm;
+    private Automaton automaton;
     private  JFileChooser fc;
     private JButton openButton, saveButton;
     private  JTextArea log;
@@ -44,9 +49,9 @@ public class GraphicDFA extends JFrame {
         setSize(520, 650);
         setLocationRelativeTo(null);
         graph = new mxGraph();
-        dfa = new DFA();
         nfa = new NFA();
-
+        tm = new TuringMachine();
+//        mxKeyboardHandler mk =new mxKeyboardHandler( graphComponent);
         //Init Log
         log = new JTextArea(5,20);
         log.setMargin(new Insets(5, 5, 5, 5));
@@ -65,6 +70,12 @@ public class GraphicDFA extends JFrame {
         graph.setAllowDanglingEdges(false);
         graph.setVertexLabelsMovable(false);
 
+
+        Map<String, Object> style = graph.getStylesheet().getDefaultEdgeStyle();
+        style.put(mxConstants.STYLE_ROUNDED, true);
+        style.put(mxConstants.STYLE_EDGE, mxConstants.EDGESTYLE_ENTITY_RELATION);
+
+
         //Create Open File Button
         openButton = new JButton("Open",
                 createImageIcon("Images/Open16.gif"));
@@ -82,9 +93,10 @@ public class GraphicDFA extends JFrame {
                             System.out.println(file.getAbsolutePath());
                             FileInputStream door = new FileInputStream(file.getAbsolutePath());
                             ObjectInputStream reader = new ObjectInputStream(door);
-                            NFA x = new NFA();
+                            NFA x ;
                             x = (NFA) reader.readObject();
-
+                            CreateAutomaton(x);
+                            nfa = x;
                             System.out.println(x.states.iterator().next().name);
 
 
@@ -106,14 +118,35 @@ public class GraphicDFA extends JFrame {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                Object parent = graph.getDefaultParent();
+                Object []cells =graphComponent.getCells(new Rectangle(520,650),parent );
+                for(Object obj: cells) {
+                        mxCell cell = ((mxCell) obj);
+                    if(nfa.getStateWithName(cell.getValue().toString())!=null) {
+                        if (cell.getValue().toString().equals(nfa.getStateWithName(cell.getValue().toString()).name)) {
+
+                            nfa.setStateWithAttributes(cell.getValue().toString(), cell.getGeometry().getX(), cell.getGeometry().getY());
+
+
+
+                        }
+                    }
+
+
+                }
+                nfa.printStatePositions();
                 //Handle save button action.
               if (e.getSource() == saveButton) {
+
+
                 int returnVal = fc.showSaveDialog(GraphicDFA.this);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     File file = fc.getSelectedFile();
                     //This is where a real application would save the file.
                     try
                     {
+                        nfa.updateTransitions();
                         FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".ser");
                         ObjectOutputStream oos = new ObjectOutputStream(fos);
                         oos.writeObject(nfa);
@@ -138,25 +171,16 @@ public class GraphicDFA extends JFrame {
 
         add(buttonPanel, BorderLayout.PAGE_START);
         add(saveButton, BorderLayout.PAGE_START);
-
+        addMenuBar();
         graphComponent = new mxGraphComponent(graph);
         graphComponent.setPreferredSize(new Dimension(520, 400));
         getContentPane().add(graphComponent);
 
-
         graph.getChildVertices(graph.getDefaultParent());
 
-
-       /* graphComponent.getGraphControl().addMouseListener(new PopClickListener(graphComponent, dfa));
-
-
-        graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, new EdgeConnectionListener(graphComponent, dfa));
-*/
         graphComponent.getGraphControl().addMouseListener(new PopClickListener(graphComponent, nfa));
 
-
         graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, new EdgeConnectionListener(graphComponent, nfa));
-
 
         moveLabel = new JLabel();
         addIcon(moveLabel, 25, 25, "/Images/move.png");
@@ -168,7 +192,6 @@ public class GraphicDFA extends JFrame {
 
         text = new JTextField();
         getContentPane().add(text);
-
 
         text.setPreferredSize(new Dimension(150, 21));
         setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -182,17 +205,18 @@ public class GraphicDFA extends JFrame {
 
                 String checkExistence = "";
                 //for(State st:dfa.getStates()){
-                for (State st : nfa.getStates()) {
+                for (State st : automaton.getStates()) {
                     if (st.name.equals(text.getText().toString()))
                         checkExistence = st.name;
                 }
+                automaton.existState(text.getText().toString());
 
                 if (!text.getText().toString().equals(checkExistence)) {
-
+                    State state = new State(text.getText().toString());
                     graph.getModel().beginUpdate();
                     Object parent = graph.getDefaultParent();
-                    Object v1 = graph.insertVertex(parent, null, text.getText(), 330, 30, 50, 50, "shape=ellipse;fillColor=white");
-                    State state = new State(text.getText().toString());
+                    Object v1 = graph.insertVertex(parent, null, text.getText(), 10, 30, 50, 50, "shape=ellipse;fillColor=white");
+
                     //dfa.addState(state);
                     nfa.addState(state);
                     graph.getModel().endUpdate();
@@ -206,8 +230,6 @@ public class GraphicDFA extends JFrame {
                 }
             }
         });
-
-
 
         evalText = new JTextField();
         getContentPane().add(evalText);
@@ -236,15 +258,12 @@ public class GraphicDFA extends JFrame {
             }
         });
 
-
         getContentPane().add(evalButton);
 
         labelA = new JLabel();
         labelA.setPreferredSize(new Dimension(100, 20));
         labelA.setText("Result");
         getContentPane().add(labelA);
-
-
 
         //Add the buttons and the log to this panel.
         add(logScrollPane, BorderLayout.CENTER);
@@ -284,4 +303,134 @@ public class GraphicDFA extends JFrame {
     }
 
 
+    public void CreateAutomaton(Automaton automata){
+
+        Object parent = graph.getDefaultParent();
+
+        for(State s:automata.states){
+            graph.getModel().beginUpdate();
+            if(automata.startState.name.equals(s.name)) {
+                Object v = graph.insertVertex(parent, null, s.name, s.PointX, s.PointY, 50, 50);
+            }
+            else if(automata.isFinal(s)) {
+                Object v = graph.insertVertex(parent, null, s.name, s.PointX, s.PointY, 50, 50, "shape=doubleEllipse;fillColor=white;fontColor=red");
+            }
+            else {
+                Object v = graph.insertVertex(parent, null, s.name, s.PointX, s.PointY, 50, 50, "shape=ellipse;fillColor=white");
+            }
+            graph.getModel().endUpdate();
+        }
+
+       for (Transition t : automata.transitions) {
+
+           Object vertex =getVertexInGraph(t.source.name);
+
+           Object vertex2 =getVertexInGraph(t.destination.name);
+
+           graph.getModel().beginUpdate();
+           graph.insertEdge(parent, null, t.symbol, vertex, vertex2);
+           graph.getModel().endUpdate();
+       }
+    }
+
+
+    public void addMenuBar(){
+        //Where the GUI is created:
+        JMenuBar menuBar;
+        JMenu menu, submenu;
+        JMenuItem menuItem;
+        JRadioButtonMenuItem menuItemDFA;
+        JRadioButtonMenuItem menuItemNFA;
+        JRadioButtonMenuItem menuItemNFA_E;
+        JRadioButtonMenuItem menuItemPDA;
+        JCheckBoxMenuItem cbMenuItem;
+
+        //Create the menu bar.
+        menuBar = new JMenuBar();
+
+        //Build the first menu.
+        menu = new JMenu("Select Automaton");
+        menu.setMnemonic(KeyEvent.VK_S);
+        menu.getAccessibleContext().setAccessibleDescription(
+                "The only menu in this program that has menu items");
+        menuBar.add(menu);
+
+        //a group of radio button menu items
+        menu.addSeparator();
+        ButtonGroup group = new ButtonGroup();
+        menuItemDFA = new JRadioButtonMenuItem("Deterministic Automaton(DFA)");
+        menuItemDFA.setSelected(true);
+        menuItemDFA.setMnemonic(KeyEvent.VK_D);
+        group.add(menuItemDFA);
+        menu.add(menuItemDFA);
+
+        menuItemDFA.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                automaton = new DFA();
+                System.out.println("DFA Selected");
+            }
+        });
+
+        menuItemNFA = new JRadioButtonMenuItem("Non Deterministic Automaton(NFA)");
+        menuItemNFA.setMnemonic(KeyEvent.VK_N);
+        group.add(menuItemNFA);
+        menu.add(menuItemNFA);
+
+        menuItemNFA.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                automaton = new NFA();
+                System.out.println("NFASelected");
+            }
+        });
+
+
+        menuItemNFA_E = new JRadioButtonMenuItem("Non Deterministic Automaton Epsilon(NFA-E)");
+        menuItemNFA_E.setMnemonic(KeyEvent.VK_E);
+        group.add(menuItemNFA_E);
+        menu.add(menuItemNFA_E);
+        menuItemNFA_E.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                automaton = new NFA_E();
+                System.out.println("NFA_E Selected");
+            }
+        });
+
+        menuItemPDA = new JRadioButtonMenuItem("Pushdown Automaton(PDA)");
+        menuItemPDA.setMnemonic(KeyEvent.VK_P);
+        group.add(menuItemPDA);
+        menu.add(menuItemPDA);
+        menuItemPDA.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                automaton = new PDA();
+                System.out.println("PDA Selected");
+            }
+        });
+
+        menuItemPDA.isSelected();
+
+        //Build second menu in the menu bar.
+        menu = new JMenu("Turing Machine");
+        menu.setMnemonic(KeyEvent.VK_N);
+
+        menu.getAccessibleContext().setAccessibleDescription(
+                "This menu does nothing");
+        menuBar.add(menu);
+
+        getContentPane().add(menuBar);
+    }
+
+
+    public Object getVertexInGraph(String name) {
+        Object vertex = new Object();
+        Object parent = graph.getDefaultParent();
+        for (int i = 0; i <graph.getModel().getChildCount(parent); i++) {
+
+            vertex = graph.getModel().getChildAt(parent, i);
+            if ((((mxCell) vertex).getValue().toString()).equals(name))
+                return vertex;
+
+        }
+
+        return vertex;
+    }
 }

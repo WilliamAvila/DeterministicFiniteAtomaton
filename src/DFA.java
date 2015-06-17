@@ -13,19 +13,6 @@ public class DFA extends Automaton {
         super();
     }
 
-    public State getNextState(char symbol, State start){
-        State next =null;
-
-        if(start!=null) {
-            for (Transition t : transitions) {
-                if (t.source.name.equals(start.name) && t.symbol == symbol) {
-                    next = t.destination;
-                    return next;
-                }
-            }
-        }
-        return  next;
-    }
 
 
     public Boolean evaluateDFA(String input){

@@ -1,6 +1,8 @@
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -12,13 +14,6 @@ public  class Automaton  implements java.io.Serializable {
     public State startState;                  //3.A start state
     public Set<State> finalStates;            //4.A set of final or accepting states
 
-    public Set<Transition> getTransitions() {
-        return transitions;
-    }
-
-    public void setTransitions(Set<Transition> transitions) {
-        this.transitions = transitions;
-    }
 
     public Set<Transition> transitions;
 
@@ -40,6 +35,25 @@ public  class Automaton  implements java.io.Serializable {
         this.finalStates =new HashSet<>();
     }
 
+    public void updateTransitions(){
+        for(State s: states){
+            for(Transition t:transitions){
+                if(s.name.equals(t.source.name)){
+                    t.source.PointX = s.PointX;
+                    t.source.PointY = s.PointY;
+                }
+                else if(s.name.equals(t.destination.name)){
+
+                    t.destination.PointX = s.PointX;
+                    t.destination.PointY = s.PointY;
+                }
+
+
+            }
+        }
+
+    }
+
     public  void addState(State state){
         this.states.add(state);
         System.out.println("Added State: "+state.name);
@@ -57,14 +71,36 @@ public  class Automaton  implements java.io.Serializable {
         System.out.println("Added Transition: " + transition.source.name + "-" + transition.symbol + "-" + transition.destination.name);
         alphabet.add(transition.symbol);
 
-
         return  true;
 
 
 
     }
 
+    public State getStateWithName(String name){
+        State state = null;
+        for(State s:states){
+            if(s.name.equals(name))
+                state=s;
+        }
+        return state;
+    }
 
+    public  void printStatePositions(){
+        for(State s:states){
+            System.out.println(s.name +" "+s.PointX+" "+s.PointY);
+        }
+    }
+
+    public void setStateWithAttributes(String name,double posX,double posY){
+        State state = null;
+        for(State s:states){
+            if(s.name.equals(name)) {
+                state = s;
+                s.setPoint(posX,posY);
+            }
+        }
+    }
 
     public  void addFinalState(State state){
         this.finalStates.add(state);
@@ -78,6 +114,20 @@ public  class Automaton  implements java.io.Serializable {
         System.out.println("Added Symbol: " + symbol);
     }
 
+    public Set<Transition> getTransitionsFromStateSet(State state){
+        List nextTransitions = new ArrayList();
+        Set<Transition> trans=new HashSet<>();
+
+        if(state!=null) {
+            for(Transition t:transitions){
+                if(state.name.equals(t.source.name))
+                    trans.add(t);
+
+            }
+        }
+
+        return  trans;
+    }
 
     public Set<State> getStates() {
         return states;
@@ -91,8 +141,12 @@ public  class Automaton  implements java.io.Serializable {
         return alphabet;
     }
 
-    public void setAlphabet(Set<Character> alphabet) {
-        this.alphabet = alphabet;
+    public void setAlphabet(String input) {
+        for(int i=0;i<input.length();i++){
+            if(!alphabet.contains(input.charAt(i)))
+                alphabet.add(input.charAt(i));
+
+        }
     }
 
     public State getStartState() {
@@ -140,6 +194,29 @@ public  class Automaton  implements java.io.Serializable {
                 return true;
         }
         return false;
+    }
+
+
+    public boolean isFinal(State s) {
+        for(State f:finalStates) {
+            if (f.name.equals(s.name))
+                return true;
+        }
+        return false;
+    }
+
+    public State getNextState(char symbol, State start){
+        State next =null;
+
+        if(start!=null) {
+            for (Transition t : transitions) {
+                if (t.source.name.equals(start.name) && t.symbol == symbol) {
+                    next = t.destination;
+                    return next;
+                }
+            }
+        }
+        return  next;
     }
 
 }
