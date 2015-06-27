@@ -11,6 +11,8 @@ public class NFA_E extends Automaton {
     Set<Transition>EmptyTransitions;
     Set<State>EmptyStates;
     Transition transitionsArray[];
+    private State lastState;
+
     public NFA_E(Set<State> states, Set<Character> alphabet, State startState, Set<State> finalStates, Set<Transition> transitions) {
         super(states, alphabet, startState, finalStates, transitions);
         this.EmptyTransitions = new HashSet<>();
@@ -19,10 +21,10 @@ public class NFA_E extends Automaton {
 
     }
     public NFA_E(){
-
+        super();
     }
 
-    public boolean evaluateNFA(String input, State currentState) {
+    public boolean evaluateNFA_E(String input, State currentState) {
 
         Set<Transition> trans;
         trans = getNextTransitions(currentState);
@@ -34,10 +36,10 @@ public class NFA_E extends Automaton {
             for (Transition t : trans){
                 if(t.symbol ==first ){
                     currentState = t.destination;
-                    results.add(evaluateNFA(input.substring(1), currentState)) ;
+                    results.add(evaluateNFA_E(input.substring(1), currentState)) ;
                 } else if (t.symbol == 'E') {
                     currentState = t.destination;
-                    results.add(evaluateNFA(input, currentState));
+                    results.add(evaluateNFA_E(input, currentState));
                 }
             }
 
@@ -122,6 +124,23 @@ public class NFA_E extends Automaton {
     public NFA ConvertToNFA(){
 
         return null;
+    }
+
+    public NFA_E joinNFA_E(NFA_E nfa_e){
+        for(Transition t: nfa_e.transitions)
+            this.addTransition(t);
+        for(State s:nfa_e.states)
+            this.addState(s);
+
+        return this;
+    }
+
+    public void setLastState(State lastState){
+      this.lastState = lastState;
+    }
+
+    public State getLastState(){
+            return lastState;
     }
 
 

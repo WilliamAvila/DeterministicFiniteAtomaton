@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b73b0c7e-63c4-44f4-afa6-d1ec1ae44baf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PDA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PopUpMenuMainWIndow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TMTape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TMTransition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TuringMachine.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DFAProject/PopUpDemo.class" afterPath="" />
+    <list default="true" id="b73b0c7e-63c4-44f4-afa6-d1ec1ae44baf" name="Default" comment="Testing Turing Machine an Pushdown Automaton">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ConvertRegExToNFA_E.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TableStates.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/java_cup_11b.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PopUpMenuMainWIndow.java" afterPath="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/Automaton.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/Automaton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/DFA.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/DFA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/EdgeConnectionListener.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/EdgeConnectionListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$1.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$2.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$2.class" />
@@ -23,18 +19,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener$1.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener$2.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/State.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/State.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/Transition.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/Transition.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Automaton.java" afterPath="$PROJECT_DIR$/src/Automaton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DFA.java" afterPath="$PROJECT_DIR$/src/DFA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DFAProject.iml" afterPath="$PROJECT_DIR$/DFAProject.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdgeConnectionListener.java" afterPath="$PROJECT_DIR$/src/EdgeConnectionListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraphicDFA.java" afterPath="$PROJECT_DIR$/src/GraphicDFA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NFA_E.java" afterPath="$PROJECT_DIR$/src/NFA_E.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PDA.java" afterPath="$PROJECT_DIR$/src/PDA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopClickListener.java" afterPath="$PROJECT_DIR$/src/PopClickListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopClickListenerMenu.java" afterPath="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopUpMenu.java" afterPath="$PROJECT_DIR$/src/PopUpMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/State.java" afterPath="$PROJECT_DIR$/src/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TMTape.java" afterPath="$PROJECT_DIR$/src/TMTape.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Transition.java" afterPath="$PROJECT_DIR$/src/Transition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TuringMachine.java" afterPath="$PROJECT_DIR$/src/TuringMachine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DFAProject.iws" />
@@ -49,8 +48,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DFAProject$Main.coverage" NAME="Main Coverage Results" MODIFIED="1435332896479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -58,107 +66,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Automaton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Automaton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2788105">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Automaton#1;class#Automaton#0" expanded="false" />
+                <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
+                <element signature="method#getTransitionsFromStateSet#0;class#Automaton#0" expanded="false" />
+                <element signature="method#getNextTransitions#0;class#Automaton#0" expanded="false" />
+                <element signature="method#existState#0;class#Automaton#0" expanded="false" />
+                <element signature="method#isFinal#0;class#Automaton#0" expanded="false" />
+                <element signature="method#getNextState#0;class#Automaton#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GraphicDFA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="11" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="11" />
+              <caret line="343" column="16" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
+                <element signature="method#initGUI#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#createImageIcon#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#CreateVisualAutomaton#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
+                <element signature="method#clearGraph#0;class#GraphicDFA#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PDA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PDA.java">
+      <file leaf-file-name="TableStates.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TableStates.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TuringMachine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TuringMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TMTape.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TMTape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6581986">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#355#362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Automaton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Automaton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Automaton#1;class#Automaton#0" expanded="false" />
-                <element signature="method#updateTransitions#0;class#Automaton#0" expanded="false" />
-                <element signature="method#addState#0;class#Automaton#0" expanded="false" />
-                <element signature="method#addTransition#0;class#Automaton#0" expanded="false" />
-                <element signature="method#getStateWithName#0;class#Automaton#0" expanded="false" />
-                <element signature="method#printStatePositions#0;class#Automaton#0" expanded="false" />
-                <element signature="method#setStateWithAttributes#0;class#Automaton#0" expanded="false" />
-                <element signature="method#addFinalState#0;class#Automaton#0" expanded="false" />
-                <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
-                <element signature="e#3774#3775#0" expanded="true" />
-                <element signature="e#3805#3806#0" expanded="true" />
-                <element signature="method#existState#0;class#Automaton#0" expanded="false" />
-                <element signature="method#isFinal#0;class#Automaton#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TMTransition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TMTransition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Transition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +125,30 @@
         <entry file="file://$PROJECT_DIR$/src/DFA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+              <folding>
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopClickListenerMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EdgeConnectionListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -204,25 +185,30 @@
         <option value="$PROJECT_DIR$/src/Automata.java" />
         <option value="$PROJECT_DIR$/src/EdgeConnecttionListener.java" />
         <option value="$PROJECT_DIR$/src/NFA.java" />
-        <option value="$PROJECT_DIR$/src/PopUpMenu.java" />
         <option value="$PROJECT_DIR$/src/Images/PopUpMenuMainWIndow.java" />
         <option value="$PROJECT_DIR$/src/Images/PopClickListenerMenu.java" />
-        <option value="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
-        <option value="$PROJECT_DIR$/src/EdgeConnectionListener.java" />
-        <option value="$PROJECT_DIR$/src/PopClickListener.java" />
         <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/TuringMachine/TuringMachine.java" />
-        <option value="$PROJECT_DIR$/src/Transition.java" />
         <option value="$PROJECT_DIR$/src/TMTransition.java" />
-        <option value="$PROJECT_DIR$/src/PDA.java" />
-        <option value="$PROJECT_DIR$/src/NFA_E.java" />
         <option value="$PROJECT_DIR$/src/Images/TMTape.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/TMTape.java" />
+        <option value="$PROJECT_DIR$/src/org/unitec/regularexpresion/Lexer.java" />
+        <option value="$PROJECT_DIR$/src/TuringMachine.java" />
+        <option value="$PROJECT_DIR$/src/org/unitec/regularexpresion/RegularExpressionParser.java" />
+        <option value="$PROJECT_DIR$/src/Transition.java" />
+        <option value="$PROJECT_DIR$/src/NFA_E.java" />
+        <option value="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" />
+        <option value="$PROJECT_DIR$/src/ConvertRegExToNFA_E.java" />
+        <option value="$PROJECT_DIR$/src/PopUpMenu.java" />
+        <option value="$PROJECT_DIR$/src/PopClickListener.java" />
+        <option value="$PROJECT_DIR$/src/EdgeConnectionListener.java" />
+        <option value="$PROJECT_DIR$/src/Automaton.java" />
+        <option value="$PROJECT_DIR$/src/PDA.java" />
+        <option value="$PROJECT_DIR$/src/TableStates.java" />
         <option value="$PROJECT_DIR$/src/DFA.java" />
         <option value="$PROJECT_DIR$/src/GraphicDFA.java" />
-        <option value="$PROJECT_DIR$/src/TMTape.java" />
-        <option value="$PROJECT_DIR$/src/TuringMachine.java" />
-        <option value="$PROJECT_DIR$/src/Automaton.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
       </list>
     </option>
   </component>
@@ -241,8 +227,24 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
+    <option name="width" value="1342" />
     <option name="height" value="743" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -267,9 +269,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,13 +303,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/java-cup-11b.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -328,6 +330,9 @@
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -571,6 +576,7 @@
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/java-cup-11b.jar" />
       <envs />
       <method />
     </configuration>
@@ -785,10 +791,26 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.HelloWorld" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ClickHandler" />
+    <configuration default="false" name="ConvertRegExToNFA_E" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ConvertRegExToNFA_E" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DFAProject" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.ConvertRegExToNFA_E" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="Application.HelloWorld" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ClickHandler" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -891,42 +913,98 @@
       <workItem from="1434468794245" duration="21285000" />
       <workItem from="1434555433944" duration="2750000" />
       <workItem from="1434560213710" duration="1431000" />
-      <workItem from="1434562108274" duration="473000" />
+      <workItem from="1434562108274" duration="2635000" />
+      <workItem from="1434572977685" duration="9202000" />
+      <workItem from="1434584075581" duration="3481000" />
+      <workItem from="1434630884613" duration="15839000" />
+      <workItem from="1434657173018" duration="3971000" />
+      <workItem from="1434668899582" duration="1444000" />
+      <workItem from="1434735934632" duration="4594000" />
+      <workItem from="1434740609108" duration="2170000" />
+      <workItem from="1435082504487" duration="1697000" />
+      <workItem from="1435191387403" duration="3007000" />
+      <workItem from="1435197219076" duration="1671000" />
+      <workItem from="1435198911717" duration="1374000" />
+      <workItem from="1435207072182" duration="5871000" />
+      <workItem from="1435245640985" duration="10590000" />
+      <workItem from="1435279284282" duration="4005000" />
+      <workItem from="1435289255867" duration="10997000" />
+      <workItem from="1435301837572" duration="9674000" />
+      <workItem from="1435312452320" duration="1338000" />
+      <workItem from="1435332867588" duration="8601000" />
+      <workItem from="1435351546649" duration="15182000" />
+      <workItem from="1435376744412" duration="2778000" />
+      <workItem from="1435419121842" duration="4598000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding Turing Machine an Pushdown Automaton">
+      <created>1434562705339</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1434562705339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260697000" />
+    <option name="totallyTimeSpent" value="384943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="743" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1342" height="743" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.038694993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40449437" sideWeight="0.698786" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25842696" sideWeight="0.36722305" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.038639877" sideWeight="0.48666668" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.039020658" sideWeight="0.5102639" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41091493" sideWeight="0.5309119" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52487963" sideWeight="0.4690881" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23520486" sideWeight="0.50851065" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26324236" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.41502276" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26324236" sideWeight="0.4939302" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.33462134" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23520486" sideWeight="0.49148935" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25842696" sideWeight="0.6327769" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20324574" sideWeight="0.49148935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08988764" sideWeight="0.572643" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.4939394" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44783306" sideWeight="0.48222566" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.038639877" sideWeight="0.5133333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.4969651" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.039020658" sideWeight="0.5102639" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.038639877" sideWeight="0.48666668" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52487963" sideWeight="0.4690881" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26324236" sideWeight="0.4939302" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.038639877" sideWeight="0.5133333" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24884081" sideWeight="0.49148935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08988764" sideWeight="0.572643" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44783306" sideWeight="0.48222566" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52487963" sideWeight="0.5309119" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23520486" sideWeight="0.50851065" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.33462134" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.4969651" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -939,17 +1017,31 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding Turing Machine an Pushdown Automaton" />
+    <MESSAGE value="Testing Turing Machine an Pushdown Automaton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Turing Machine an Pushdown Automaton" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/TuringMachine.java</url>
-          <line>38</line>
+          <line>44</line>
           <properties />
-          <option name="timeStamp" value="65" />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConvertRegExToNFA_E.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="66" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="125" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -964,183 +1056,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1151,7 +1066,13 @@
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
+            <element signature="method#initGUI#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#CreateVisualAutomaton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#clearGraph#0;class#GraphicDFA#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1162,7 +1083,6 @@
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1173,7 +1093,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
+            <element signature="method#initGUI#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#CreateVisualAutomaton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#clearGraph#0;class#GraphicDFA#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1232,24 +1158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/util/mxEventSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14071856">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/view/mxGraph.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.212435">
           <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopUpMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35446686">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1260,86 +1172,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/net/URLClassLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5514223">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.036437247">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopUpMenuMainWIndow.java">
+    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/swing/handler/mxConnectionHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.487965">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state vertical-scroll-proportion="-3.84">
+          <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.java">
+    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/util/mxEventSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.20253165">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/awt/event/ActionListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3452055">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TuringMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28346458">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NFA.java">
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6614173">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24561404">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/java-cup-11b.jar!/java_cup/runtime/Symbol.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35322195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/tree/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24324325">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/RegularExpressionParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.44">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/AbstractStringBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.44">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/StringBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.12">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/tree/CharNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/tree/RepeatNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23076923">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/tree/ORNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/unitec/regularexpresion/tree/ANDNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConvertRegExToNFA_E.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42755345">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#obtainInverse#0;class#ConvertRegExToNFA_E#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopUpMenuMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94061756">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/awt/event/ActionListener.class">
+    <entry file="file://$PROJECT_DIR$/src/TMTransition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14604463">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.34204274">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.90163934">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopClickListener.java">
+    <entry file="file://$PROJECT_DIR$/src/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.46370023">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TMTape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3114754">
+          <caret line="52" column="60" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopUpMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.704918">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NFA_E.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36263737">
-          <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state vertical-scroll-proportion="2.7822013">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1347,88 +1372,115 @@
     <entry file="file://$PROJECT_DIR$/src/Transition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TMTransition.java">
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/util/Stack.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0301205">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56582636">
+          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.92">
+          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding>
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="11" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="11" />
+          <caret line="343" column="16" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1434556070835" expanded="true" signature="11535:11547" placeholder="..." />
+            <element signature="method#initGUI#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#CreateVisualAutomaton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
+            <element signature="method#clearGraph#0;class#GraphicDFA#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TuringMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/PDA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74349445">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TableStates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+        <state vertical-scroll-proportion="-3.2788105">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Automaton#1;class#Automaton#0" expanded="false" />
-            <element signature="method#updateTransitions#0;class#Automaton#0" expanded="false" />
-            <element signature="method#addState#0;class#Automaton#0" expanded="false" />
-            <element signature="method#addTransition#0;class#Automaton#0" expanded="false" />
-            <element signature="method#getStateWithName#0;class#Automaton#0" expanded="false" />
-            <element signature="method#printStatePositions#0;class#Automaton#0" expanded="false" />
-            <element signature="method#setStateWithAttributes#0;class#Automaton#0" expanded="false" />
-            <element signature="method#addFinalState#0;class#Automaton#0" expanded="false" />
             <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
-            <element signature="e#3774#3775#0" expanded="true" />
-            <element signature="e#3805#3806#0" expanded="true" />
+            <element signature="method#getTransitionsFromStateSet#0;class#Automaton#0" expanded="false" />
+            <element signature="method#getNextTransitions#0;class#Automaton#0" expanded="false" />
             <element signature="method#existState#0;class#Automaton#0" expanded="false" />
             <element signature="method#isFinal#0;class#Automaton#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/net/URLClassLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036437247">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TMTape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6581986">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#getNextState#0;class#Automaton#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1498,7 +1550,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jgraphx</last-edited>
+          <last-edited>java-cup-11b</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

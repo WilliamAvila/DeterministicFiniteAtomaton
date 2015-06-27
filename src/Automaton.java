@@ -23,6 +23,7 @@ public  class Automaton  implements java.io.Serializable {
         this.startState = startState;
         this.finalStates = finalStates;
         this.transitions = transitions;
+
     }
 
     public Automaton() {
@@ -63,7 +64,7 @@ public  class Automaton  implements java.io.Serializable {
 
 
         for(Transition trans:transitions){
-            if(trans.source.name.equals(transition.source.name)&& trans.symbol ==transition.symbol)
+            if(trans.source.name.equals(transition.source.name)&& trans.symbol ==transition.symbol && this instanceof DFA)
                 return false;
         }
 

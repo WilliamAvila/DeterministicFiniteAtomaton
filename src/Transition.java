@@ -7,6 +7,7 @@ public class Transition implements Serializable {
     State source;
     State destination;
     char symbol;
+    String symbols;
 
     public Transition() {
 
@@ -16,6 +17,13 @@ public class Transition implements Serializable {
         this.source = source;
         this.destination = destination;
         this.symbol = symbol;
+    }
+
+    public Transition(State source, State destination, String symbols) {
+        this.source = source;
+        this.destination = destination;
+        this.symbols = symbols;
+        this.symbol = symbols.charAt(0);
     }
 
 

@@ -34,4 +34,6 @@ public class DFA extends Automaton {
         }
         return accepted;
     }
+
+
 }

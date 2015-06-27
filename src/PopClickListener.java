@@ -12,13 +12,17 @@ import java.awt.event.MouseEvent;
 class PopClickListener extends MouseAdapter {
     private mxGraphComponent graphComponent;
     private mxCellState state;
-    Automaton automata;
+    Automaton automaton;
     mxCell cell;
 
 
     public PopClickListener(mxGraphComponent graphComponent, Automaton automata) {
         this.graphComponent = graphComponent;
-        this.automata = automata;
+        this.automaton = automata;
+    }
+
+    public void setAutomaton(Automaton automaton) {
+        this.automaton = automaton;
     }
 
     public void mousePressed(MouseEvent e) {
@@ -55,7 +59,7 @@ class PopClickListener extends MouseAdapter {
     }
 
     private void doPop(MouseEvent e){
-        PopUpMenu menu = new PopUpMenu(graphComponent);
+        PopUpMenu menu = new PopUpMenu(graphComponent ,this.automaton);
         menu.show(e.getComponent(), e.getX(), e.getY());
 
         menu.setFinal.addMouseListener(new MouseAdapter() {
@@ -64,7 +68,7 @@ class PopClickListener extends MouseAdapter {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
                     cell.setStyle("shape=doubleEllipse;fillColor=white;fontColor=red");
-                    automata.addFinalState(new State(cell.getValue().toString()));
+                    automaton.addFinalState(new State(cell.getValue().toString()));
                     graphComponent.refresh();
                 }
             }
@@ -76,13 +80,35 @@ class PopClickListener extends MouseAdapter {
             public void mousePressed(MouseEvent e) {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
-                    cell.setStyle("fontColor=blue");
-                    automata.setStartState(new State(cell.getValue().toString()));
+                    cell.setStyle("shape=ellipse;fillColor=cyan;fontColor=black");
+                    automaton.setStartState(new State(cell.getValue().toString()));
                     graphComponent.refresh();
                 }
             }
         });
 
+        menu.setInitialSymbol.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    super.mousePressed(e);
+                    String inputValue = showInputDialog();
+                    ((PDA)automaton).initialSymbol =inputValue.charAt(0);
+                }
+            }
+        });
 
+    }
+
+    private String showInputDialog()
+    {
+        String inputValue = JOptionPane.showInputDialog("Initial Symbol:");
+
+        if(inputValue == null || inputValue.isEmpty() || !inputValue.matches("[A-Za-z]"))
+        {
+            inputValue = showInputDialog();
+        }
+
+        return inputValue;
     }
 }

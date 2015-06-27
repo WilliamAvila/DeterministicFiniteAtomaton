@@ -10,7 +10,6 @@ public class TuringMachine extends Automaton {
     TMTape tape;
 
     Set<TMTransition> TMTransitions;
-
     char Blank;
 
     public TuringMachine(Set<State> states, State startState, Set<State> finalStates, Set<TMTransition> transitions) {
@@ -24,31 +23,33 @@ public class TuringMachine extends Automaton {
         TMTransitions=new HashSet<TMTransition>();
     }
 
+    public boolean addTMTransition(TMTransition transition){
+
+        for(TMTransition trans:TMTransitions){
+            if(trans.source.name.equals(transition.source.name)&& trans.symbols.equals(transition.symbols))
+                return false;
+        }
+
+        this.TMTransitions.add(transition);
+        System.out.println("Added Transition: " + transition.source.name + "-" + transition.symbols + "-" + transition.destination.name);
+
+        return  true;
+    }
 
     public boolean evaluateTuringMachine(String input){
         State lastState =startState;
         Boolean accepted=false;
+        setAlphabet(input);
         tape = new TMTape(input);
 
-        for(int i =0;i<input.length();i++){
+        TMTransition t =getNextTransition(lastState,input.charAt(0));
 
-            TMTransition t =getNextTransition(lastState,input.charAt(i));
-            if(t!=null){
-
-                State next = t.destination;
+            while (t!=null) {
                 tape.MoveNext(t.symbols);
-                lastState =next;
-
-            }else{
-                break;
+                State next = t.destination;
+                t = getNextTransition(next, tape.getCurrentTapeValue());
+                lastState = next;
             }
-
-        }
-
-        if(tape.getTapeContent().contains(input))
-            return false;
-
-
 
         if(lastState!=null) {
 

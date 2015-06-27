@@ -42,11 +42,18 @@ public class Main {
 
         nfa  = new NFA(states,null,state1,finalStates,transitions);
 
-        Boolean ans=nfa.evaluateNFA("11100",nfa.startState);
+        Boolean ans=nfa.evaluateNFA("11100", nfa.startState);
         System.out.println(String.valueOf(ans));
         // nfa.printAutomaton();
         DFA dfa =nfa.convertToDFA();
         dfa.printAutomaton();
+
+
+        TuringMachine tm = new TuringMachine();
+
+        tm.setAlphabet("0022102");
+        for(Character c:tm.getAlphabet())
+            System.out.println(c);
 
 
 

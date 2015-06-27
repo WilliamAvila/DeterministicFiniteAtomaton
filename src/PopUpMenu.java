@@ -12,12 +12,17 @@ import java.awt.event.MouseListener;
 class PopUpMenu extends JPopupMenu {
     JMenuItem setInitial;
     JMenuItem setFinal;
+    JMenuItem setInitialSymbol;
     mxGraphComponent graphComponent;
 
-    public PopUpMenu(mxGraphComponent graphComponent) {
+    public PopUpMenu(mxGraphComponent graphComponent,Automaton automaton) {
         this.graphComponent = graphComponent;
         setInitial = new JMenuItem("Set Initial");
         setFinal = new JMenuItem("Set Final");
+        if(automaton instanceof PDA){
+            setInitialSymbol = new JMenuItem("Set Initial Symbol");
+            add(setInitialSymbol);
+        }
 
         add(setInitial);
         add(setFinal);

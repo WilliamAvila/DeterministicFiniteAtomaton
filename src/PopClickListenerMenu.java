@@ -1,6 +1,8 @@
 import com.mxgraph.model.mxCell;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxCellState;
+import org.unitec.regularexpresion.RegularExpressionParser;
+import org.unitec.regularexpresion.tree.Node;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -9,23 +11,34 @@ import java.awt.event.MouseEvent;
 /**
  * Created by william on 5/31/15.
  */
-public class PopClickListenerMenu {
+public class PopClickListenerMenu extends MouseAdapter {
     private mxGraphComponent graphComponent;
     private mxCellState state;
-    Automaton automata;
+    Automaton automaton;
     mxCell cell;
 
 
     public PopClickListenerMenu(mxGraphComponent graphComponent, Automaton automata) {
         this.graphComponent = graphComponent;
-        this.automata = automata;
+        this.automaton = automata;
+    }
+
+
+    public void setAutomaton(Automaton automaton) {
+        this.automaton = automaton;
     }
 
     public void mousePressed(MouseEvent e) {
-        doPop(e);
+
+
+        if (SwingUtilities.isRightMouseButton(e)) {
+            mxCell cell = (mxCell) graphComponent.getCellAt(e.getX(), e.getY());
+            if (cell == null) {
+                doPop(e);
+            }
+        }
+
     }
-
-
 
     public void mouseReleased(MouseEvent e){
         if (e.isPopupTrigger())
@@ -33,30 +46,38 @@ public class PopClickListenerMenu {
     }
 
     private void doPop(MouseEvent e){
-        PopUpMenu menu = new PopUpMenu(graphComponent);
+        PopUpMenuMainWindow menu = new PopUpMenuMainWindow(graphComponent,automaton);
         menu.show(e.getComponent(), e.getX(), e.getY());
 
-        menu.setFinal.addMouseListener(new MouseAdapter() {
+        menu.regExToNFA_E.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
-                    cell.setStyle("shape=doubleEllipse;fillColor=white;fontColor=red");
-                    automata.addFinalState(new State(cell.getValue().toString()));
-                    graphComponent.refresh();
+                    String inputValue = JOptionPane.showInputDialog("Regular Expression:");
+
+                    ConvertRegExToNFA_E cvr = new ConvertRegExToNFA_E();
+
+                    String str = "0.(0+1)";
+                    try {
+                        Node rootNode = new RegularExpressionParser().Parse(str);
+
+                        cvr.getTree(rootNode);
+                        //CreateVisualAutomaton(cvr.nfa_e);
+                        automaton =cvr.nfa_e;
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+
                 }
             }
         });
 
-
-        menu.setInitial.addMouseListener(new MouseAdapter() {
+        menu.setNFA.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     super.mousePressed(e);
-                    cell.setStyle("fontColor=blue");
-                    automata.setStartState(new State(cell.getValue().toString()));
-                    graphComponent.refresh();
                 }
             }
         });
