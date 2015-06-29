@@ -1,5 +1,6 @@
 import javax.swing.undo.AbstractUndoableEdit;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,9 +13,9 @@ public class Main {
 
 
         NFA nfa;
-        Set<State> states =new HashSet<State>();
-        Set<Transition> transitions=new HashSet<>();
-        Set<State>finalStates =new HashSet<>();
+        ArrayList<State> states =new ArrayList<>();
+        ArrayList<Transition> transitions=new ArrayList<>();
+        ArrayList<State> finalStates =new ArrayList<>();
 
 
         State state1 =new State("p");

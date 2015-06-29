@@ -9,15 +9,15 @@ import java.util.Set;
  * Created by william on 4/29/15.
  */
 public  class Automaton  implements java.io.Serializable {
-    public Set<State> states;                 //1.A finite set of states Q
-    public Set<Character>alphabet;            //2.A finite set of symbols alphabet
+    public ArrayList<State> states;                 //1.A finite set of states Q
+    public ArrayList<Character> alphabet;            //2.A finite set of symbols alphabet
     public State startState;                  //3.A start state
-    public Set<State> finalStates;            //4.A set of final or accepting states
+    public ArrayList<State> finalStates;            //4.A set of final or accepting states
 
 
-    public Set<Transition> transitions;
+    public ArrayList<Transition> transitions;
 
-    public Automaton(Set<State> states, Set<Character> alphabet, State startState, Set<State> finalStates, Set<Transition> transitions) {
+    public Automaton(ArrayList<State> states, ArrayList<Character> alphabet, State startState, ArrayList<State> finalStates, ArrayList<Transition> transitions) {
         this.states = states;
         this.alphabet = alphabet;
         this.startState = startState;
@@ -29,11 +29,11 @@ public  class Automaton  implements java.io.Serializable {
     public Automaton() {
 
 
-        this.states =new HashSet<>();
-        this.alphabet =new HashSet<>();
-        this.transitions=new HashSet<>();
+        this.states =new ArrayList<>();
+        this.alphabet =new ArrayList<>();
+        this.transitions=new ArrayList<>();
         this.startState=null;
-        this.finalStates =new HashSet<>();
+        this.finalStates =new ArrayList<>();
     }
 
     public void updateTransitions(){
@@ -130,15 +130,15 @@ public  class Automaton  implements java.io.Serializable {
         return  trans;
     }
 
-    public Set<State> getStates() {
+    public ArrayList<State> getStates() {
         return states;
     }
 
-    public void setStates(Set<State> states) {
+    public void setStates(ArrayList<State> states) {
         this.states = states;
     }
 
-    public Set<Character> getAlphabet() {
+    public ArrayList<Character> getAlphabet() {
         return alphabet;
     }
 
@@ -159,11 +159,11 @@ public  class Automaton  implements java.io.Serializable {
         System.out.println(startState.name);
     }
 
-    public Set<State> getFinalStates() {
+    public ArrayList<State> getFinalStates() {
         return finalStates;
     }
 
-    public void setFinalStates(Set<State> finalStates) {
+    public void setFinalStates(ArrayList<State> finalStates) {
         this.finalStates = finalStates;
     }
 

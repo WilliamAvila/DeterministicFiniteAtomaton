@@ -87,16 +87,18 @@ class PopClickListener extends MouseAdapter {
             }
         });
 
-        menu.setInitialSymbol.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                if (SwingUtilities.isLeftMouseButton(e)) {
-                    super.mousePressed(e);
-                    String inputValue = showInputDialog();
-                    ((PDA)automaton).initialSymbol =inputValue.charAt(0);
+        if(automaton instanceof PDA) {
+            menu.setInitialSymbol.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    if (SwingUtilities.isLeftMouseButton(e)) {
+                        super.mousePressed(e);
+                        String inputValue = showInputDialog();
+                        ((PDA) automaton).initialSymbol = inputValue.charAt(0);
+                    }
                 }
-            }
-        });
+            });
+        }
 
     }
 

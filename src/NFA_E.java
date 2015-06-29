@@ -11,9 +11,21 @@ public class NFA_E extends Automaton {
     Set<Transition>EmptyTransitions;
     Set<State>EmptyStates;
     Transition transitionsArray[];
+     State finalState;
+
+    public State getFinalState() {
+        return finalState;
+    }
+
+
+
+    public void setFinalState(State finalState) {
+        this.finalState = finalState;
+    }
+
     private State lastState;
 
-    public NFA_E(Set<State> states, Set<Character> alphabet, State startState, Set<State> finalStates, Set<Transition> transitions) {
+    public NFA_E(ArrayList<State> states, ArrayList<Character> alphabet, State startState, ArrayList<State> finalStates, ArrayList<Transition> transitions) {
         super(states, alphabet, startState, finalStates, transitions);
         this.EmptyTransitions = new HashSet<>();
         this.EmptyStates = new HashSet<>();

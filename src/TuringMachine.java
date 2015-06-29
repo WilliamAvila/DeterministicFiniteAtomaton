@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,28 +10,28 @@ public class TuringMachine extends Automaton {
     State start;
     TMTape tape;
 
-    Set<TMTransition> TMTransitions;
+
     char Blank;
 
-    public TuringMachine(Set<State> states, State startState, Set<State> finalStates, Set<TMTransition> transitions) {
+    public TuringMachine(ArrayList<State> states, State startState, ArrayList<State> finalStates, ArrayList<Transition> transitions) {
         this.states = states;
         this.startState = startState;
-        this.TMTransitions = transitions;
+        this.transitions = transitions;
         this.finalStates = finalStates;
     }
 
     public TuringMachine(){
-        TMTransitions=new HashSet<TMTransition>();
+        transitions=new ArrayList<>();
     }
 
     public boolean addTMTransition(TMTransition transition){
 
-        for(TMTransition trans:TMTransitions){
+        for(Transition trans:transitions){
             if(trans.source.name.equals(transition.source.name)&& trans.symbols.equals(transition.symbols))
                 return false;
         }
 
-        this.TMTransitions.add(transition);
+        this.transitions.add(transition);
         System.out.println("Added Transition: " + transition.source.name + "-" + transition.symbols + "-" + transition.destination.name);
 
         return  true;
@@ -42,7 +43,7 @@ public class TuringMachine extends Automaton {
         setAlphabet(input);
         tape = new TMTape(input);
 
-        TMTransition t =getNextTransition(lastState,input.charAt(0));
+        Transition t =getNextTransition(lastState,input.charAt(0));
 
             while (t!=null) {
                 tape.MoveNext(t.symbols);
@@ -63,9 +64,9 @@ public class TuringMachine extends Automaton {
         return accepted;
     }
 
-    public TMTransition getNextTransition(State start,char symbol){
-        TMTransition transition = null;
-        for(TMTransition t: TMTransitions){
+    public Transition getNextTransition(State start,char symbol){
+        Transition transition = null;
+        for(Transition t: transitions){
             if(t.source.name.equals(start.name)){
                 String tokens[] = t.symbols.split(",");
                 if(tokens[0].charAt(0) == symbol)

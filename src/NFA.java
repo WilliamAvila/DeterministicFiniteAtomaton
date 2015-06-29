@@ -11,7 +11,7 @@ public class NFA extends Automaton{
         super();
     }
 
-    public NFA(Set<State> states, Set<Character> alphabet, State startState, Set<State> finalStates, Set<Transition> transitions) {
+    public NFA(ArrayList<State> states, ArrayList<Character> alphabet, State startState, ArrayList<State> finalStates, ArrayList<Transition> transitions) {
         super(states, alphabet, startState, finalStates, transitions);
     }
 
@@ -66,16 +66,54 @@ public class NFA extends Automaton{
     }
 
     public DFA convertToDFA(){
-        DFA dfa =new DFA();
 
-        List<State> list = new ArrayList<State>(states);
+            DFA dfa = new DFA();
+            dfa.startState = this.startState;
+            List<State> actuales = new ArrayList<>();
+            actuales.add(startState);
+            for(State s:finalStates){
+                if(s.name.equals(startState.name)){
+                    dfa.finalStates.add(s);
+                }
+            }
+            dfa.states.add(startState);
+            //getStatesAndTransitions(dfa, actuales, 0);
+            return dfa;
 
-        for(State s:states){
-
-        }
-
-        return dfa;
     }
+
+
+//    private void getStatesAndTransitions(DFA dfa,List<State> actuales,int pos) {
+//        List <State> nuevosActuales;
+//        nuevosActuales = new ArrayList<>();
+//        if(pos == alphabet.size())
+//            return;
+//
+//        for(Transition transition:transitions){
+//            for(State state:actuales)
+//                if(transition.source.name.equals(state.name)&&
+//                        transition.symbol == (alphabet.get(pos))){
+//                    nuevosActuales.add(transition.destination);
+//                    break;
+//                }
+//        }
+//        getStatesAndTransitions(dfa, actuales, pos + 1);
+//        if(!nuevosActuales.isEmpty()){
+//            if(siEsIgualAlgunEstadoDFA(nuevosActuales, dfa)){
+//                crearTransicionDFA(nuevosActuales, dfa, actuales, pos);
+//                return;
+//            }
+//
+//            State nuevoEstado = new State();
+//            nuevoEstado.name=nuevosActuales.stream().map((estado) -> estado.name).reduce(
+//                    nuevoEstado.name, String::concat);
+//            dfa.states.add(nuevoEstado);
+//            agregarEstadosFinalesDFA(nuevosActuales, dfa);
+//            crearTransicionDFA(nuevosActuales, dfa, actuales, pos);
+//            getStatesAndTransitions(dfa, nuevosActuales, 0);
+//        }
+//
+//    }
 
 
 

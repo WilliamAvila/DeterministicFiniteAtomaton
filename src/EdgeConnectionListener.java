@@ -62,8 +62,12 @@ public class EdgeConnectionListener implements mxEventSource.mxIEventListener {
                     new State(edge.getTarget().getValue().toString()), symbol.charAt(0)));
 
         }
-        else if(automaton instanceof  NFA || automaton instanceof NFA_E){
+        else if(automaton instanceof  NFA ){
             return ((NFA)automaton).addNFATransition(new Transition(new State(edge.getSource().getValue().toString()),
+                    new State(edge.getTarget().getValue().toString()), symbol.charAt(0)));
+
+        }else if(automaton instanceof NFA_E){
+            return ((NFA_E)automaton).addTransition(new Transition(new State(edge.getSource().getValue().toString()),
                     new State(edge.getTarget().getValue().toString()), symbol.charAt(0)));
 
         }

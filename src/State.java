@@ -11,6 +11,9 @@ public class State implements Serializable {
         this.name = name;
     }
 
+    public State() {
+    }
+
     public State(String name,  double pointX, double pointY) {
         this.name = name;
         PointX = pointX;

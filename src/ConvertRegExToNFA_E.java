@@ -31,8 +31,8 @@ public class ConvertRegExToNFA_E {
             genericName="q";
             kleeneStates = new ArrayList<>();
 
-            String tree = getTree(rootNode);
-            System.out.println(tree);
+           // String tree = getTree(rootNode);
+            //System.out.println(tree);
             String inversedExpression =  obtainInverse(rootNode);
             //nfa_e.printAutomaton();
 
@@ -53,60 +53,59 @@ public class ConvertRegExToNFA_E {
 
     }
 
-    public static String  getTree(Node rootNode){
+    public static NFA_E  getTree(Node rootNode){
         if(rootNode instanceof CharNode) {
 
-//            State state1 = new State(getGenericName());
-//            State state2 = new State(getGenericName());
-//            nfa_e.addTransition(new Transition(state1, state2, ((CharNode) rootNode).getValue()));
-//            lastState = state2;
-//            nfa_e.addFinalState(lastState);
+            NFA_E tempNFA_E = new NFA_E();
+            buildNFA_EFromSymbol(tempNFA_E, ((CharNode) rootNode).getValue());
 
-            return ((CharNode) rootNode).getValue();
+            return tempNFA_E;
 
 
         }
-        else if (rootNode instanceof ORNode)
-        {
-            ORNode orNode = (ORNode)rootNode;
-              buildOrNFA_E(rootNode);
+        else if (rootNode instanceof ORNode) {
+            ORNode orNode = (ORNode) rootNode;
+            return buildOrNFA_E(getTree(orNode.getLeftNode()), getTree(orNode.getRightNode()));
 
-            return "("+
-                    getTree(orNode.getLeftNode()) +"+"+
-                    getTree(orNode.getRightNode())+
-                    ")";
         }
+
         else if (rootNode instanceof ANDNode)
         {
             ANDNode andNode = (ANDNode)rootNode;
-            buildAndNFA_E(rootNode);
-
-            return "("+
-                    getTree(andNode.getRightNode()) +"."+
-                    getTree(andNode.getLeftNode())+
-                    ")";
+            return buildAndNFA_E(getTree(andNode.getLeftNode()), getTree(andNode.getRightNode()));
         }
         else
         {
-            return "("+
-                    getTree(((RepeatNode) rootNode).getNode())+
-                    ")*";
+            RepeatNode repeatNode = (RepeatNode)rootNode;
+
+            if(repeatNode.getNode() instanceof CharNode)
+                return buildKleeneNFA_E(getTree((CharNode)repeatNode.getNode()));
+            else if(repeatNode.getNode() instanceof ORNode)
+                return buildKleeneNFA_E(getTree((ORNode)repeatNode.getNode()));
+            else if(repeatNode.getNode() instanceof ANDNode)
+                return buildKleeneNFA_E(getTree((ANDNode)repeatNode.getNode()));
+            return null;
+
         }
-    }
-
-    private static void saveKleenStates(State state1,State state2,State state3,State state4){
-        kleeneStates.add(state1);
-        kleeneStates.add(state2);
-        kleeneStates.add(state3);
-        kleeneStates.add(state4);
-    }
-
-
-
-
-    private static void findLastState(){
 
     }
+
+
+
+    public static void buildNFA_EFromSymbol(NFA_E nfa_e , String symbol){
+        State state1 = new State(getGenericName());
+        State state2 = new State(getGenericName());
+        Transition t = new Transition(state1, state2, symbol);
+        nfa_e.addTransition(t);
+        lastState = state2;
+        nfa_e.addState(state1);
+        nfa_e.addState(state2);
+        nfa_e.addFinalState(lastState);
+        nfa_e.setStartState(state1);
+        nfa_e.setFinalState(lastState);
+    }
+
+
 
     private static String obtainInverse(Node rootNode) {
         if(rootNode instanceof CharNode)
@@ -135,129 +134,105 @@ public class ConvertRegExToNFA_E {
         }
 
     }
-    public static void buildAndNFA_E(Node rootNode){
 
-        ANDNode andNode = (ANDNode)rootNode;
-        if(andNode.getLeftNode() instanceof CharNode && andNode.getRightNode() instanceof CharNode) {
 
-            State state1;
-            if (lastState != null) {
-                state1 = new State(getGenericName());
+    public static NFA_E buildOrNFA_E(NFA_E nfa_e1, NFA_E nfa_e2){
+        NFA_E combination = getCombinationNFA_E(nfa_e1,nfa_e2);
 
-                nfa_e.addTransition(new Transition(nfa_e.getStateWithName(lastState.name),state1,'E'));
-                nfa_e.finalStates.remove(lastState);
-            } else {
-                state1 = new State(getGenericName());
 
-                nfa_e.setStartState(state1);
-            }
+        State start = new State(getGenericName());
+        combination.setStartState(start);
+        combination.addState(start);
 
-            State state2 = new State(getGenericName());
-            State state3 = new State(getGenericName());
-            State state4 = new State(getGenericName());
-            State state5 = new State(getGenericName());
-            State state6 = new State(getGenericName());
-            nfa_e.addState(state1);
-            nfa_e.addState(state2);
-            nfa_e.addState(state3);
-            nfa_e.addState(state4);
-            nfa_e.addState(state5);
-            nfa_e.addState(state6);
-            nfa_e.addTransition(new Transition(state1, state2, 'E'));
-            nfa_e.addTransition(new Transition(state2, state3, getTree(andNode.getLeftNode())));
-            nfa_e.addTransition(new Transition(state3, state4, 'E'));
-            nfa_e.addTransition(new Transition(state4, state5, getTree(andNode.getRightNode())));
-            nfa_e.addTransition(new Transition(state5, state6, 'E'));
-            lastState = state6;
-            nfa_e.addFinalState(lastState);
+        combination.addTransition(new Transition(start, nfa_e1.startState, 'E'));
+        combination.addTransition(new Transition(start, nfa_e2.startState, 'E'));
 
-        }else if(andNode.getLeftNode() instanceof CharNode ){
 
-            State state1 = new State(getGenericName());
-            State state2 = new State(getGenericName());
-            nfa_e.addTransition(new Transition(state1, state2, ((CharNode)andNode.getLeftNode()).getValue()));
-            lastState = state2;
-            nfa_e.addFinalState(lastState);
-            nfa_e.addState(state1);
-            nfa_e.addState(state2);
-            nfa_e.setStartState(state1);
-        }else if( andNode.getRightNode() instanceof CharNode){
-            State state1 = new State(getGenericName());
-            State state2 = new State(getGenericName());
-            nfa_e.addTransition(new Transition(lastState, state1, ((CharNode) andNode.getRightNode()).getValue()));
-            nfa_e.addTransition(new Transition(state1, state2,'E'));
-            nfa_e.finalStates.clear();
-            lastState = state2;
-            nfa_e.addState(state1);
-            nfa_e.addState(state2);
+        State lastState = new State(getGenericName());
+        combination.addState(lastState);
+        combination.addFinalState(lastState);
+        combination.setFinalState(lastState);
 
-            nfa_e.addFinalState(lastState);
 
-        }
+        combination.addTransition(new Transition(nfa_e1.getFinalState(),lastState, 'E'));
+        combination.addTransition(new Transition(nfa_e2.getFinalState(),lastState,'E'));
+
+        return combination;
+
     }
 
-    public static void buildOrNFA_E(Node rootNode){
-        ORNode orNode = (ORNode)rootNode;
-        if(orNode.getLeftNode() instanceof CharNode && orNode.getRightNode() instanceof CharNode){
+    public static NFA_E buildAndNFA_E(NFA_E nfa_e1, NFA_E nfa_e2){
+        NFA_E combination = getCombinationNFA_E(nfa_e1,nfa_e2);
 
 
-        if(orNode.getLeftNode() instanceof CharNode && orNode.getRightNode() instanceof CharNode) {
-            State state1;
-            if (lastState != null) {
-                state1 = new State(getGenericName());
+        State start = new State(getGenericName());
+        combination.setStartState(start);
+        combination.addState(start);
 
-                nfa_e.addTransition(new Transition(lastState,state1,'E'));
-                nfa_e.finalStates.remove(lastState);
-            } else {
-                state1 = new State(getGenericName());
-                nfa_e.setStartState(state1);
-            }
+        combination.addTransition(new Transition(start, nfa_e1.startState, 'E'));
 
-            State state2 = new State(getGenericName());
-            State state3 = new State(getGenericName());
-            State state4 = new State(getGenericName());
-            State state5 = new State(getGenericName());
-            State state6 = new State(getGenericName());
-            nfa_e.addState(state1);
-            nfa_e.addState(state2);
-            nfa_e.addState(state3);
-            nfa_e.addState(state4);
-            nfa_e.addState(state5);
-            nfa_e.addState(state6);
-            nfa_e.addTransition(new Transition(state1, state2, 'E'));
-            nfa_e.addTransition(new Transition(state1, state3, 'E'));
-            nfa_e.addTransition(new Transition(state2, state4, getTree(orNode.getLeftNode())));
-            nfa_e.addTransition(new Transition(state3, state5, getTree(orNode.getRightNode())));
-            nfa_e.addTransition(new Transition(state4, state6, 'E'));
-            nfa_e.addTransition(new Transition(state5, state6, 'E'));
-            lastState = state6;
-            nfa_e.addFinalState(lastState);
-        }else if(orNode.getLeftNode() instanceof CharNode ){
-            State state2 = new State(getGenericName());
-            nfa_e.addTransition(new Transition(lastState, state2, ((CharNode) rootNode).getValue()));
-            lastState = state2;
-            nfa_e.addFinalState(lastState);
-            nfa_e.addState(state2);
-        }else if( orNode.getRightNode() instanceof CharNode){
-            State state1 = new State(getGenericName());
-            State state2 = new State(getGenericName());
-            nfa_e.addTransition(new Transition(state1, state2, ((CharNode) rootNode).getValue()));
-            lastState = state2;
-            nfa_e.addFinalState(lastState);
 
-            nfa_e.addState(state1);
-            nfa_e.addState(state2);
-        }
-        }
+        State lastState = new State(getGenericName());
+        combination.addState(lastState);
+        combination.addFinalState(lastState);
+        combination.setFinalState(lastState);
+
+        combination.addTransition(new Transition(nfa_e1.getFinalState(),nfa_e2.startState, 'E'));
+        combination.addTransition(new Transition(nfa_e2.getFinalState(),lastState,'E'));
+
+        return combination;
+
     }
-    public static void buildKleeneNFA_E(){
 
+    public static NFA_E buildKleeneNFA_E(NFA_E nfa_e){
+        NFA_E applyStar = new NFA_E();
+        applyStar = getCombinationNFA_E(applyStar,nfa_e);
+        State startState = new State(getGenericName());
+        applyStar.setStartState(startState);
+        applyStar.addState(startState);
+
+        State lastState = new State(getGenericName());
+        applyStar.addState(lastState);
+        applyStar.addFinalState(lastState);
+        applyStar.setFinalState(lastState);
+
+        applyStar.addTransition(new Transition(startState, lastState, "E"));
+        applyStar.addTransition(new Transition(startState, nfa_e.startState, "E"));
+
+        applyStar.addTransition(new Transition(nfa_e.finalState,lastState , "E"));
+        applyStar.addTransition(new Transition(nfa_e.startState,nfa_e.finalState,"E"));
+
+
+        return applyStar;
     }
 
     public static String getGenericName(){
         String name = genericName + count;
         count ++;
         return name;
+    }
+
+    public static NFA_E getCombinationNFA_E(NFA_E nfa_e1, NFA_E nfa_e2){
+        NFA_E combination= new NFA_E();
+
+
+        nfa_e2.finalStates.clear();
+
+        for(State s: nfa_e1.states)
+            combination.addState(s);
+
+        for(Transition t: nfa_e1.transitions)
+            combination.addTransition(t);
+
+        for(State s: nfa_e2.states)
+            combination.addState(s);
+
+        for(Transition t: nfa_e2.transitions)
+            combination.addTransition(t);
+
+
+        return combination;
+
     }
 
 }

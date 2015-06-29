@@ -6,22 +6,26 @@ import javax.swing.*;
  * Created by william on 5/31/15.
  */
 public class PopUpMenuMainWindow extends JPopupMenu {
-    JMenuItem setDFA;
-    JMenuItem setNFA;
-    JMenuItem setNFAe;
+
+    JMenuItem convertToDFA;
+    JMenuItem convertToNFA;
     JMenuItem regExToNFA_E;
+    JMenuItem clearScreen;
     mxGraphComponent graphComponent;
 
     public PopUpMenuMainWindow(mxGraphComponent graphComponent,Automaton automaton) {
         this.graphComponent = graphComponent;
-        setDFA = new JMenuItem("Convert DFA");
-        setNFA = new JMenuItem("Convert NFA");
-        setNFAe = new JMenuItem("Convert NFA-E");
-        regExToNFA_E = new JMenuItem("Convert Regular Expression to NFA-E");
+        if(automaton instanceof NFA) {
+            convertToDFA = new JMenuItem("Convert NFA to DFA");
+            convertToNFA = new JMenuItem("Convert NFA-E to NFA");
+            add(convertToDFA);
+            add(convertToNFA);
 
-        add(setDFA);
-        add(setNFA);
-        add(setNFAe);
+        }
+        regExToNFA_E = new JMenuItem("Convert Regular Expression to NFA-E");
+        clearScreen = new JMenuItem("Clear");
+
         add(regExToNFA_E);
+        add(clearScreen);
     }
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Set;
 
 /**
@@ -5,7 +6,7 @@ import java.util.Set;
  */
 public class DFA extends Automaton {
 
-    public DFA(Set<State> states, Set<Character> alphabet, State startState, Set<State> finalStates, Set<Transition> transitions) {
+    public DFA(ArrayList<State> states, ArrayList<Character> alphabet, State startState, ArrayList<State> finalStates, ArrayList<Transition> transitions) {
         super(states, alphabet, startState, finalStates, transitions);
     }
 
@@ -20,7 +21,7 @@ public class DFA extends Automaton {
         Boolean accepted=false;
 
         for(int i =0;i<input.length();i++){
-            State next =getNextState(input.charAt(i),lastState);
+            State next =getNextState(input.charAt(i), lastState);
             lastState =next;
 
         }

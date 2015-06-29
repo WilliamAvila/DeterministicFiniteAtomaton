@@ -3,13 +3,13 @@ import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxConstants;
 import com.mxgraph.util.mxEvent;
 import com.mxgraph.view.mxGraph;
-import org.unitec.regularexpresion.RegularExpressionParser;
-import org.unitec.regularexpresion.tree.Node;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.util.Map;
 
@@ -24,9 +24,6 @@ public class GraphicDFA extends JFrame {
     private  JTextField evalText;
     private JButton addNodeButton;
     private JButton evalButton;
-    private JLabel transLabel;
-    private JLabel moveLabel;
-    private JLabel deleteLabel;
     private JLabel labelA;
     private NFA nfa;
     private TuringMachine tm;
@@ -41,7 +38,7 @@ public class GraphicDFA extends JFrame {
 
 
     public  GraphicDFA(){
-        super("NFA");
+        super("Automaton Constructor");
         initGUI();
     }
 
@@ -51,8 +48,6 @@ public class GraphicDFA extends JFrame {
         graph = new mxGraph();
         nfa = new NFA();
         tm = new TuringMachine();
-//        mxKeyboardHandler mk =new mxKeyboardHandler( graphComponent);
-        //Init Log
 
 
         graph.setCellsResizable(false);
@@ -63,7 +58,7 @@ public class GraphicDFA extends JFrame {
 
         Map<String, Object> style = graph.getStylesheet().getDefaultEdgeStyle();
         style.put(mxConstants.STYLE_ROUNDED, true);
-        style.put(mxConstants.STYLE_EDGE, mxConstants.EDGESTYLE_ENTITY_RELATION);
+        style.put(mxConstants.STYLE_EDGE, mxConstants.EDGESTYLE_LOOP);
 
 
         setSaveAndOpenButton();
@@ -84,12 +79,6 @@ public class GraphicDFA extends JFrame {
         graphComponent.getGraphControl().addMouseListener(pclm);
         graphComponent.getConnectionHandler().addListener(mxEvent.CONNECT, ecl);
 
-        /*moveLabel = new JLabel();
-        addIcon(moveLabel, 25, 25, "/Images/move.png");
-        transLabel = new JLabel();
-        addIcon(transLabel, 25, 25, "/Images/transition.png");
-        deleteLabel = new JLabel();
-        addIcon(deleteLabel, 25, 25, "/Images/delete.png");*/
 
         setAddNodeAndEvalButton();
 
@@ -211,13 +200,13 @@ public class GraphicDFA extends JFrame {
     }
 
 
-    public void CreateVisualAutomaton(Automaton automata){
+    public void CreateVisualAutomaton(Automaton automata, mxGraph graph){
 
         Object parent = graph.getDefaultParent();
 
         for(State s:automata.states){
             graph.getModel().beginUpdate();
-            if(automata.startState.name.equals(s.name)) {
+            if(automata.startState != null && automata.startState.name.equals(s.name)) {
                 Object v = graph.insertVertex(parent, null, s.name, s.PointX, s.PointY, 50, 50,"shape=ellipse;fillColor=cyan");
             }
             else if(automata.isFinal(s)) {
@@ -236,9 +225,20 @@ public class GraphicDFA extends JFrame {
            Object vertex2 =getVertexInGraph(t.destination.name);
 
            graph.getModel().beginUpdate();
-           graph.insertEdge(parent, null, t.symbol, vertex, vertex2);
+           if(automata instanceof TuringMachine || automata instanceof PDA)
+                graph.insertEdge(parent, null, t.symbols, vertex, vertex2);
+           else
+               graph.insertEdge(parent, null, t.symbol, vertex, vertex2);
            graph.getModel().endUpdate();
+
        }
+
+    }
+
+
+    public void CreateVisualAutomaton(Automaton automata){
+
+        CreateVisualAutomaton(automata,this.graph);
     }
 
 
