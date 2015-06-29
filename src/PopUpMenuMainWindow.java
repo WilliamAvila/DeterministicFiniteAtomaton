@@ -7,6 +7,7 @@ import javax.swing.*;
  */
 public class PopUpMenuMainWindow extends JPopupMenu {
 
+    JMenuItem minimizeDFA;
     JMenuItem convertToDFA;
     JMenuItem convertToNFA;
     JMenuItem regExToNFA_E;
@@ -21,6 +22,10 @@ public class PopUpMenuMainWindow extends JPopupMenu {
             add(convertToDFA);
             add(convertToNFA);
 
+        }
+        if(automaton instanceof DFA) {
+            minimizeDFA = new JMenuItem("Minimize DFA");
+            add(minimizeDFA);
         }
         regExToNFA_E = new JMenuItem("Convert Regular Expression to NFA-E");
         clearScreen = new JMenuItem("Clear");

@@ -2,32 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b73b0c7e-63c4-44f4-afa6-d1ec1ae44baf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/Automaton.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/Automaton.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/DFA.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/DFA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$1.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$2.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$3.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$4.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$5.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/GraphicDFA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/Main.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/EdgeConnectionListener.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/EdgeConnectionListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/NFA.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/NFA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/NFA_E.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/NFA_E.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/PopClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DFAProject/State.class" afterPath="$PROJECT_DIR$/out/production/DFAProject/State.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Automaton.java" afterPath="$PROJECT_DIR$/src/Automaton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConvertRegExToNFA_E.java" afterPath="$PROJECT_DIR$/src/ConvertRegExToNFA_E.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DFA.java" afterPath="$PROJECT_DIR$/src/DFA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EdgeConnectionListener.java" afterPath="$PROJECT_DIR$/src/EdgeConnectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraphicDFA.java" afterPath="$PROJECT_DIR$/src/GraphicDFA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NFA.java" afterPath="$PROJECT_DIR$/src/NFA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NFA_E.java" afterPath="$PROJECT_DIR$/src/NFA_E.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopClickListener.java" afterPath="$PROJECT_DIR$/src/PopClickListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopClickListenerMenu.java" afterPath="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" afterPath="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/State.java" afterPath="$PROJECT_DIR$/src/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TuringMachine.java" afterPath="$PROJECT_DIR$/src/TuringMachine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DFAProject.iws" />
@@ -60,63 +43,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TMTransition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TMTransition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TuringMachine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TuringMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#606#607#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PDA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Automaton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Automaton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
                 <element signature="method#getTransitionsFromStateSet#0;class#Automaton#0" expanded="false" />
-                <element signature="method#getNextTransitions#0;class#Automaton#0" expanded="false" />
                 <element signature="method#existState#0;class#Automaton#0" expanded="false" />
                 <element signature="method#getNextState#0;class#Automaton#0" expanded="false" />
               </folding>
@@ -128,8 +63,76 @@
         <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mxEventSource.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/util/mxEventSource.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.76">
+              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+              <folding>
+                <element signature="e#1885#1886#0" expanded="true" />
+                <element signature="e#1935#1936#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mxConnectionHandler.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/swing/handler/mxConnectionHandler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.08">
+              <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayList.class" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.24">
+              <caret line="784" column="1" selection-start-line="784" selection-start-column="1" selection-end-line="784" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Transition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#223#224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopClickListenerMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+              <folding>
+                <element signature="method#clearGraph#0;class#PopClickListenerMenu#0" expanded="false" />
+                <element signature="method#getVertexInGraph#0;class#PopClickListenerMenu#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,26 +141,19 @@
         <entry file="file://$PROJECT_DIR$/src/NFA_E.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphicDFA.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
+      <file leaf-file-name="DFA.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DFA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93771046">
-              <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.50348026">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#createImageIcon#0;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#CreateVisualAutomaton#1;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#addMenuBar#0;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#setListeners#0;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
-                <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -205,19 +201,19 @@
         <option value="$PROJECT_DIR$/src/PopUpMenu.java" />
         <option value="$PROJECT_DIR$/src/PDA.java" />
         <option value="$PROJECT_DIR$/src/TableStates.java" />
-        <option value="$PROJECT_DIR$/src/DFA.java" />
         <option value="$PROJECT_DIR$/src/PopClickListener.java" />
         <option value="$PROJECT_DIR$/src/State.java" />
-        <option value="$PROJECT_DIR$/src/NFA.java" />
-        <option value="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" />
         <option value="$PROJECT_DIR$/src/ConvertRegExToNFA_E.java" />
-        <option value="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/NFA_E.java" />
-        <option value="$PROJECT_DIR$/src/Automaton.java" />
         <option value="$PROJECT_DIR$/src/EdgeConnectionListener.java" />
         <option value="$PROJECT_DIR$/src/TuringMachine.java" />
         <option value="$PROJECT_DIR$/src/GraphicDFA.java" />
+        <option value="$PROJECT_DIR$/src/PopUpMenuMainWindow.java" />
+        <option value="$PROJECT_DIR$/src/PopClickListenerMenu.java" />
+        <option value="$PROJECT_DIR$/src/Automaton.java" />
+        <option value="$PROJECT_DIR$/src/NFA.java" />
+        <option value="$PROJECT_DIR$/src/NFA_E.java" />
+        <option value="$PROJECT_DIR$/src/DFA.java" />
       </list>
     </option>
   </component>
@@ -279,7 +275,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,8 +309,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -945,7 +941,9 @@
       <workItem from="1435351546649" duration="15182000" />
       <workItem from="1435376744412" duration="2778000" />
       <workItem from="1435419121842" duration="12800000" />
-      <workItem from="1435525514725" duration="15822000" />
+      <workItem from="1435525514725" duration="18779000" />
+      <workItem from="1435553778910" duration="25000" />
+      <workItem from="1435553901818" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Turing Machine an Pushdown Automaton">
       <created>1434562705339</created>
@@ -959,11 +957,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435423890458</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Regular Expression and Saving Automaton into files working!">
+      <created>1435541402409</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1435541402409</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408967000" />
+    <option name="totallyTimeSpent" value="413373000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -983,7 +987,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44783306" sideWeight="0.48222566" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.038639877" sideWeight="0.48666668" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.039020658" sideWeight="0.5102639" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34028894" sideWeight="0.5309119" order="3" side_tool="false" content_ui="tabs" />
@@ -996,9 +999,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24621212" sideWeight="0.49148935" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26163724" sideWeight="0.572643" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26163724" sideWeight="0.572643" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44783306" sideWeight="0.48222566" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.038639877" sideWeight="0.5133333" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1046,7 +1050,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding Turing Machine an Pushdown Automaton" />
     <MESSAGE value="Testing Turing Machine an Pushdown Automaton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing Turing Machine an Pushdown Automaton" />
+    <MESSAGE value="Regular Expression and Saving Automaton into files working!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Regular Expression and Saving Automaton into files working!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1069,11 +1074,17 @@
           <properties />
           <option name="timeStamp" value="134" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/EdgeConnectionListener.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="135" />
+      <option name="time" value="137" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1082,16 +1093,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1211,20 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/swing/handler/mxConnectionHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.84">
-          <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/util/mxEventSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20253165">
-          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/awt/event/ActionListener.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3452055">
@@ -1295,14 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/util/Stack.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0301205">
@@ -1314,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.92">
           <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,7 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,23 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.87689">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopUpMenuMainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6264501">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,11 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29466358">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#236#237#0" expanded="false" />
-            <element signature="e#351#352#0" expanded="false" />
-            <element signature="e#383#384#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,19 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33178654">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#204#205#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29466358">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,7 +1346,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="method#obtainInverse#0;class#ConvertRegExToNFA_E#0" expanded="false" />
-            <marker date="1435537350435" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1414,32 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6682135">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#204#205#0" expanded="false" />
-            <element signature="e#235#236#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-          <folding>
-            <element signature="method#clearGraph#0;class#PopClickListenerMenu#0" expanded="false" />
-            <element signature="method#getVertexInGraph#0;class#PopClickListenerMenu#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33410674">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1447,7 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1461,43 +1374,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NFA_E.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PDA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Automaton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
-            <element signature="method#getTransitionsFromStateSet#0;class#Automaton#0" expanded="false" />
-            <element signature="method#getNextTransitions#0;class#Automaton#0" expanded="false" />
-            <element signature="method#existState#0;class#Automaton#0" expanded="false" />
-            <element signature="method#getNextState#0;class#Automaton#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1515,8 +1397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraphicDFA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93771046">
-          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="205" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setAddNodeAndEvalButton#0;class#GraphicDFA#0" expanded="false" />
@@ -1526,6 +1408,118 @@
             <element signature="method#setListeners#0;class#GraphicDFA#0" expanded="false" />
             <element signature="method#getVertexInGraph#0;class#GraphicDFA#0" expanded="false" />
             <element signature="method#setSaveAndOpenButton#0;class#GraphicDFA#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopUpMenuMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79350346">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NFA_E.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Transition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Automaton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addSymbol#0;class#Automaton#0" expanded="false" />
+            <element signature="method#getTransitionsFromStateSet#0;class#Automaton#0" expanded="false" />
+            <element signature="method#existState#0;class#Automaton#0" expanded="false" />
+            <element signature="method#getNextState#0;class#Automaton#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EdgeConnectionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/util/mxEventSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.76">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding>
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jgraphx/lib/jgraphx.jar!/com/mxgraph/swing/handler/mxConnectionHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.08">
+          <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.24">
+          <caret line="784" column="1" selection-start-line="784" selection-start-column="1" selection-end-line="784" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopClickListenerMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+          <folding>
+            <element signature="method#clearGraph#0;class#PopClickListenerMenu#0" expanded="false" />
+            <element signature="method#getVertexInGraph#0;class#PopClickListenerMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50348026">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

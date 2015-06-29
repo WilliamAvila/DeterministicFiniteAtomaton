@@ -175,9 +175,9 @@ public  class Automaton  implements java.io.Serializable {
 
     }
 
-    public Set<Transition> getNextTransitions(State start){
+    public ArrayList<Transition> getNextTransitions(State start){
 
-        Set<Transition>nextTransitions =new HashSet<>();
+        ArrayList<Transition>nextTransitions =new ArrayList<>();
 
         if(start!=null) {
             for (Transition t : transitions) {

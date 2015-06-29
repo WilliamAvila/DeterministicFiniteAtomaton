@@ -96,6 +96,21 @@ public class PopClickListenerMenu extends MouseAdapter {
                }
            });
        }
+        if(automaton instanceof DFA){
+            menu.minimizeDFA.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    if (SwingUtilities.isLeftMouseButton(e)) {
+                        super.mousePressed(e);
+
+                        automaton = ((DFA)automaton).minimizeDFA();
+                        clearGraph(graph);
+                        CreateVisualAutomaton(automaton);
+                    }
+                }
+            });
+        }
+
 
 
     }
@@ -110,7 +125,7 @@ public class PopClickListenerMenu extends MouseAdapter {
 
         for(State s:automata.states){
             graph.getModel().beginUpdate();
-            if(automata.startState.name.equals(s.name)) {
+            if(automata.startState != null && automata.startState.name.equals(s.name)) {
                 Object v = graph.insertVertex(parent, null, s.name, xStart, yStart, 50, 50,"shape=ellipse;fillColor=cyan");
 
 

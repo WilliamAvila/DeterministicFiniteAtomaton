@@ -38,7 +38,7 @@ public class NFA_E extends Automaton {
 
     public boolean evaluateNFA_E(String input, State currentState) {
 
-        Set<Transition> trans;
+        ArrayList<Transition> trans;
         trans = getNextTransitions(currentState);
 
         if(!input.isEmpty()){

@@ -1,3 +1,4 @@
+import javax.swing.text.html.MinimalHTMLWriter;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -34,6 +35,27 @@ public class DFA extends Automaton {
             }
         }
         return accepted;
+    }
+
+
+    public DFA minimizeDFA(){
+        DFA minimize = this;
+        removeLonelyStates(minimize);
+
+
+        return minimize;
+    }
+
+
+    public void removeLonelyStates(DFA dfa){
+
+        for(State s:states){
+            if(getNextTransitions(s).size()==0)
+                states.remove(s);
+        }
+
+
+
     }
 
 
